@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+  /* Global Styles */
+  body {
+    padding-top: 56px;
+    background-color: #f8f3ef; /* Light peach background */
+  }
+  /* Adjusted Section Titles */
+.section-heading {
+  font-size:  2rem; /* Reduce the size of the titles */
+  margin-bottom: 20px;
+  text-align: center;
+  color: black; /* Light gray for a less dark color */
+}
+
+
+/* Button Styles */
+.btn-outline-custom {
+  border: 1px solid #f28b82; /* Coral color for border */
+  color: #f28b82; /* Coral color for text */
+  background-color: transparent;
+  margin: 10px;
+}
+
+.btn-outline-custom:hover {
+  background-color: #f28b82; /* Coral fill color on hover */
+  color: white; /* White text on hover */
+}
+
+
+
+
+
+  /* Experience Section */
+  .experience-container {
+    background-color: white; /* Light peach background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Outer shadow */
+  }
+  .experience-section .card {
+    background-color: #f8f3ef; /* Slightly darker peach for inner cards */
+    border-radius: 10px; /* Makes the card corners rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    overflow: hidden; /* Ensures content stays within the rounded corners */
+    margin-bottom: 20px; /* Adds space between cards */
+  }
+  .experience-section .experience-logo {
+    max-width: 100%;
+    max-height: 80px; /* Adjust logo size to be smaller */
+    object-fit: contain;
+    padding: 10px; /* Add some padding around the logo */
+  }
+
+  /* Projects Section */
+  .projects-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Outer shadow */
+  }
+
+  .projects-section .card {
+    background-color: #f8f3ef; /* Light peach background for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around cards */
+    margin-bottom: 20px; /* Space between project cards */
+    padding: 20px;
+  }
+
+  .projects-section .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .projects-section .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .projects-section .btn-outline-custom {
+    border: 2px solid #f28b82; /* Coral color for border */
+    color: #f28b82; /* Coral color for text */
+    background-color: transparent;
+    margin: 10px;
+  }
+
+  .projects-section .btn-outline-custom:hover {
+    background-color: #f28b82; /* Fill color on hover */
+    color: white;
+  }
+
+  /* Button Size */
+  .projects-section .btn {
+    padding: 5px 15px; /* Adjust padding for smaller button */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+
+  /* Skills Section */
+  .skills-section .badge-skill {
+    background-color: #f8f3ef; /* Light peach background for skills */
+    display: inline-block;
+    margin: 5px;
+    color: #6c757d;
+    padding: 10px 15px;
+    font-size: 1.2rem; /* Increase font size here */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+
+  /* Education Section */
+  .education-container {
+    background-color: white; /* Light peach background for outer container */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Outer shadow */
+  }
+  .education-section .card {
+    background-color: #f8f3ef; /* Slightly darker peach for inner cards */
+    border-radius: 10px; /* Slight rounding for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Inner shadow */
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f8f3ef; /* Match the background color with the rest of the page */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin-top: 20px;
+  }
+
+  .contact-section .section-heading {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  .contact-section p {
+    font-size: 1.2rem;
+    color: #333; /* Use a color consistent with the rest of the text on the page */
+    margin-bottom: 10px;
+  }
+
+  /* Sticky Navbar */
+  .navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+  }
+  .navbar-nav .nav-link {
+    color: white;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #f8f3ef; /* Slightly lighter white when hovering over links */
+  }
+  /* Responsive fix for navbar */
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #343a40; /* Same as navbar color for seamless look */
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- About Section -->
+<section id='about' class="about-section"></section>
+  <div class="container">
+    <h2 class="section-heading">About</h2>
+    <!-- Replace with your image path -->
+    <img src="C:\Users\akhil_2i1iywl\Downloads\IMG_2807.JPG" alt="About Me" class="mx-auto d-block about-image">
+    <p>I am a proficient Data Analyst and Data Engineer with a Master’s in Information Systems from the University of Texas at Arlington. My expertise includes building ETL pipelines, real-time data processing, and working with cloud platforms like AWS and Azure. Utilizing tools such as Python, SQL, and PySpark, I have experience transforming raw data into actionable insights and implementing cloud-based data solutions.</p>
+    <p>I am passionate about leveraging data to solve complex problems and am always eager to expand my knowledge in data engineering and analytics. Let's connect to explore innovative, data-driven solutions together!</p>
+  </div>
+</section>
+
+<style>
+  /* About Section Styles */
+  .about-section {
+    text-align: center;
+    padding-top: 40px;
+    background-color: #f8f3ef; /* Inner peach background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    margin-bottom: 20px;
+  }
+  .about-image {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image fits properly */
+    margin-bottom: 20px;
+  }
+</style>
+
+<!-- Buttons Section -->
+<section id="buttons-section" class="text-center my-2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <a href="path/to/your_resume.pdf" class="btn btn-lg btn-outline-custom">Download Resume</a>
+        <a href="https://www.linkedin.com/in/yourlinkedinprofile/" class="btn btn-lg btn-outline-custom" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-section">
+  <div class="container">
+    <h2 class="section-heading">Experience</h2>
+    <div class="experience-container">
+      <!-- Experience 1 -->
+      <div class="card mb-4">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <img src="C:\Users\akhil_2i1iywl\Downloads\accenture logo.JPG" class="card-img experience-logo" alt="Company 1 Logo">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Data Engineer</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Accenture Private Solutions</h6>
+              <p class="card-text">September 2021 to July 2023</p>
+              <ul class="card-text">
+                <li>Developed a real-time ETL pipeline using AWS services like Kinesis, Lambda, and Snowflake for global food market analysis.</li>
+                <li>Implemented automated data transformation with AWS Lambda and managed data ingestion using Kinesis Firehose and App Runner.</li>
+                <li>Configured Snowpipe for automated data ingestion into Snowflake and used Snowpark for data cleaning and preparation.</li>
+                <li>Designed interactive Power BI dashboards for real-time market insights, enhancing decision-making with actionable analytics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Experience 2 -->
+      <div class="card mb-4">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <img src="C:\Users\akhil_2i1iywl\Downloads\accenture logo.JPG" class="card-img experience-logo" alt="Company 1 Logo">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Application Development Associate</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Accenture Private Solutions</h6>
+              <p class="card-text">September 2021 to February 2022</p>
+              <ul class="card-text">
+                <li>Managed Azure Update Management, achieving a high success rate in monthly patch updates and resolving system vulnerabilities.</li>
+                <li>Organized data using Excel and automated tasks with Python, Bash, and PowerShell, reducing manual workload.</li>
+                <li>Automated deployment of virtual machines, enhancing operational efficiency within project management timelines.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="education-section">
+  <div class="container">
+    <h2 class="section-heading">Education</h2>
+    <div class="education-container p-4"> <!-- Outer container with shadow -->
+      <!-- Education 1 -->
+      <div class="card mb-4 p-3">
+        <div class="row">
+          <div class="col-md-9">
+            <h4 class="card-title mb-0">The University of Texas at Arlington</h4>
+            <p class="text-muted">Master of Science in Information Systems</p>
+            <p class="card-text">
+              Coursework: Python, Data Warehousing and Business Intelligence, Advanced Methods of Analytics (Statistics), Data Mining, Cloud Computing, Project Management, Data Science, System Analysis and Design, Evidence-Based Management, Web and Social Analytics, Management in Information Technologies.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <p class="text-muted mb-0">August 2022 - May 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education 2 -->
+      <div class="card mb-4 p-3">
+        <div class="row">
+          <div class="col-md-9">
+            <h4 class="card-title mb-0">Bapatla Engineering College</h4>
+            <p class="text-muted">Bachelor of Technology</p>
+            <p class="card-text">
+              Coursework: C Programming, Design Principles, Structural Mechanics, Environmental Science, Water Resource Engineering, Surveying
+            </p>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <p class="text-muted mb-0">June 2015 - May 2019</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-heading">Projects</h2>
+    <div class="projects-container p-4"> <!-- Outer container with shadow -->
+      
+      <!-- Project 1 -->
+      <div class="card mb-4 p-3">
+        <div class="row">
+          <div class="col-md-9">
+            <h5 class="card-title mb-0">Data Engineer: End-to-End Data Pipeline Development and Analytics Using Azure</h5>
+            <p class="card-text">
+              Developed an end-to-end data pipeline using Azure Data Factory (ADF) to replicate trip transaction data from SQL Server into Azure Data Lake Storage (ADLS Gen2). Leveraged Azure Databricks and Delta Lake for data transformation, utilizing features like time travel and schema evolution. Employed PySpark in Databricks for processing and analyzing data using the Medallion Architecture, providing insights into customer behavior and trip analytics for strategic decision-making.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <a href="https://github.com/yourusername/project1" class="btn btn-outline-custom">View project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card mb-4 p-3">
+        <div class="row">
+          <div class="col-md-9">
+            <h5 class="card-title mb-0">Financial Data Analyst: Optimizing Working Capital Management and Financial Reporting</h5>
+            <p class="card-text">
+              Conducted in-depth analysis of receivables and payables data using Tableau and Microsoft SQL Server, focusing on optimizing working capital management to improve cash flow and financial stability. Developed interactive dashboards to visualize key financial metrics and trends, utilizing AWS RDS for efficient database management and providing actionable insights to enhance decision-making and financial strategy.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <a href="https://github.com/yourusername/project2" class="btn btn-outline-custom">View project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="card mb-4 p-3">
+        <div class="row">
+          <div class="col-md-9">
+            <h5 class="card-title mb-0">Web Scraping and Data Analysis: Metacritic Movie Data Extraction and Recommendation Enhancement</h5>
+            <p class="card-text">
+              Engineered a web scraping solution using Python, BeautifulSoup, and Requests to extract detailed data on the top 1000 movies from Metacritic, including names, directors, and cast members. Implemented user-agent headers and error handling for reliable data extraction. Automated navigation through web pages and dynamic content to retrieve movie credits, and applied cosine similarity to compare movie descriptions.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <a href="https://github.com/yourusername/project3" class="btn btn-outline-custom">View project</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2 class="section-heading">Skills</h2>
+    <div class="skills-container text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="skill-badges">
+            <!-- Skill Badges -->
+            <span class="badge badge-skill">Python</span>
+            <span class="badge badge-skill">SQL</span>
+            <span class="badge badge-skill">R</span>
+            <span class="badge badge-skill">Scala</span>
+            <span class="badge badge-skill">Bash</span>
+            <span class="badge badge-skill">T-SQL</span>
+            <span class="badge badge-skill">Machine Learning</span>
+            <span class="badge badge-skill">Generative AI</span>
+            <span class="badge badge-skill">Large Language Models (LLM)</span>
+            <span class="badge badge-skill">AWS Bedrock</span>
+            <span class="badge badge-skill">AWS Services</span>
+            <span class="badge badge-skill">PostgreSQL</span>
+            <span class="badge badge-skill">MongoDB</span>
+            <span class="badge badge-skill">HBase</span>
+            <span class="badge badge-skill">Apache Cassandra</span>
+            <span class="badge badge-skill">Azure</span>
+            <span class="badge badge-skill">Snowflake</span>
+            <span class="badge badge-skill">Apache Spark</span>
+            <span class="badge badge-skill">Talend</span>
+            <span class="badge badge-skill">Docker</span>
+            <span class="badge badge-skill">Kubernetes</span>
+            <span class="badge badge-skill">Tableau</span>
+            <span class="badge badge-skill">Power BI</span>
+            <span class="badge badge-skill">Git</span>
+            <span class="badge badge-skill">Terraform</span>
+            <span class="badge badge-skill">Alteryx</span>
+            <span class="badge badge-skill">Jira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-heading">Contact Me</h2>
+    <div class="contact-container text-center p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <p><strong>Email:</strong> akhilaramareddy@gmail.com</p>
+          <p><strong>Mobile:</strong> +1 6824067942</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
