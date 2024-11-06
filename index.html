@@ -21,18 +21,20 @@
   position: relative;
   display: inline-block;
   color: #333;
+  text-align: center; /* Centers the text */
+  padding-top: 20px; /* Adds space above the title */
+  padding-bottom: 20px; /* Adds space below the title */
 }
 
 .experience-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
+  bottom: 0; /* Aligns the underline just below the text */
+  left: 50%; /* Center position */
+  transform: translateX(-50%); /* Shifts the underline back by half its width to center it */
   height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
+  background-color: #f28b82; /* Lightish orange color */
+  width: 50%; /* Adjust the width as necessary */
 }
 
 /* Projects Title */
@@ -41,18 +43,20 @@
   position: relative;
   display: inline-block;
   color: #333;
+  text-align: center; /* Centers the text */
+  padding-top: 20px; /* Adds space above the title */
+  padding-bottom: 20px; /* Adds space below the title */
 }
 
 .projects-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
+  bottom: 0; /* Aligns the underline just below the text */
+  left: 50%; /* Center position */
+  transform: translateX(-50%); /* Shifts the underline back by half its width to center it */
   height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
+  background-color: #f28b82; /* Lightish orange color */
+  width: 50%; /* Adjust the width as necessary */
 }
 
 /* Education Title */
@@ -61,18 +65,20 @@
   position: relative;
   display: inline-block;
   color: #333; /* Assuming this is your text color */
+  text-align: center; /* Centers the text */
+  padding-top: 20px; /* Adds space above the title */
+  padding-bottom: 20px; /* Adds space below the title */
 }
 
 .education-title::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Raises the underline closer to the text */
-  left: 0;
-  right: 0;
-  height: 2px; /* Thinner line if that's what's desired */
-  background-color: #f28b82; /* Ensure this is the correct color code for your lightish orange */
-  width: 30%; /* Narrower line width */
-  margin-left: 35%; /* Adjust this value to center the line as needed */
+  bottom: 0; /* Aligns the underline just below the text */
+  left: 50%; /* Center position */
+  transform: translateX(-50%); /* Shifts the underline back by half its width to center it */
+  height: 3px;
+  background-color: #f28b82; /* Lightish orange color */
+  width: 50%; /* Adjust the width as necessary */
 }
 
 
@@ -82,97 +88,20 @@
   position: relative;
   display: inline-block;
   color: #333;
+  text-align: center; /* Centers the text */
+  padding-top: 20px; /* Adds space above the title */
+  padding-bottom: 20px; /* Adds space below the title */
 }
 
 .skills-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
+  bottom: 0; /* Aligns the underline just below the text */
+  left: 50%; /* Center position */
+  transform: translateX(-50%); /* Shifts the underline back by half its width to center it */
   height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
-}
-
-.experience-title {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  color: #333;
-}
-
-.experience-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
-}
-
-/* Projects Title */
-.projects-title {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  color: #333;
-}
-
-.projects-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
-}
-
-/* Education Title */
-.education-title {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  color: #333;
-}
-
-.education-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
-}
-
-/* Skills Title */
-.skills-title {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  color: #333;
-}
-
-.skills-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
+  background-color: #f28b82; /* Lightish orange color */
+  width: 50%; /* Adjust the width as necessary */;
 }
 
 
@@ -503,7 +432,7 @@
 <!-- Education Section -->
 <h2 class="section-title education-title">Education</h2>
   <div class="container">
-    <h2 class="section-title experience-title">Experience</h2>
+    <h2 class="section-title experience-title">Education</h2>
     <div class="education-container p-4"> <!-- Outer container with shadow -->
       <!-- Education 1 -->
       <div class="card mb-4 p-3">
