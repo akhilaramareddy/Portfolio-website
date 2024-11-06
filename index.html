@@ -18,25 +18,25 @@
   /* Experience Title */
 /* Adjusting the Experience title CSS to match specifications */
 .experience-title {
-  text-align: center; /* Centers the text */
-  display: block; /* Makes the element a block to fill the width */
-  margin: 20px auto 10px; /* Adds top and bottom margin, auto horizontally centers */
-  font-size: 2rem; /* Adjust the font size to match your screenshot */
-  color: #333; /* Sets the text color */
-  position: relative; /* For positioning the pseudo-element */
-  padding-bottom: 10px; /* Space below the text */
+  display: block; /* Ensures the title uses the full width available */
+  text-align: center; /* Centers the title text */
+  margin-top: 20px; /* Space between the social media icons and the title */
+  margin-bottom: 20px; /* Space between the title and the content below */
+  font-size: 2rem; /* Adjusts the font size to match your requirements */
+  color: #333; /* Adjust the color if needed */
 }
 
 .experience-title::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Aligns at the bottom of the title */
-  left: 50%; /* Start from the middle */
-  width: 50%; /* Adjust the width of the underline to 50% of the title */
-  height: 3px; /* Height of the underline */
-  background-color: #f28b82; /* The lightish orange color */
-  transform: translateX(-50%); /* Center the underline exactly */
+  bottom: -10px; /* Adjusts the position just below the text */
+  left: 50%; /* Starts from the middle */
+  transform: translateX(-50%); /* Ensures the underline is centered */
+  width: 50%; /* Matches the underline width to the text width */
+  height: 3px;
+  background-color: #f28b82; /* Adjust the color to match your site's theme */
 }
+
 
 
 /* Projects Title */
