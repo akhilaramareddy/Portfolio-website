@@ -14,29 +14,167 @@
     background-color: #f8f3ef; /* Light peach background */
   }
   /* Adjusted Section Titles */
-  /* Title underline styling for Experience, Education, Projects, and Skills */
-.section-heading {
-  text-decoration: none; /* Removes default text decorations */
-  position: relative; /* Necessary for positioning pseudo-elements */
-  display: inline-block; /* Ensures the underline only spans the text width */
-  color: #333; /* Standard text color, adjust as needed */
+  /* Title underline styling for Experience, Education, Projects, and Skills *//* Experience Title */
+  /* Experience Title */
+.experience-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
 }
 
-.section-heading::after {
-  content: ''; /* Necessary for the pseudo-element */
+.experience-title::after {
+  content: '';
   position: absolute;
-  bottom: -10px; /* Adjusts the vertical spacing of the underline */
+  bottom: -10px;
   left: 0;
   right: 0;
-  height: 3px; /* Height of the underline */
-  background-color: #f28b82; /* Custom lightish orange color */
-  width: 50%; /* Width of the underline relative to the text */
-  margin-left: 25%; /* Centers the underline under the text */
-  text-decoration: none; /* Removes default text decorations */
-  position: relative; /* Necessary for positioning pseudo-elements */
-  display: inline-block; /* Ensures the underline only spans the text width */
-  color: #333; /* Standard text color, adjust as needed */
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
 }
+
+/* Projects Title */
+.projects-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.projects-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+/* Education Title */
+.education-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.education-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+/* Skills Title */
+.skills-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.skills-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.experience-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.experience-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+/* Projects Title */
+.projects-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.projects-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+/* Education Title */
+.education-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.education-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+/* Skills Title */
+.skills-title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.skills-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f28b82;
+  width: 50%;
+  margin-left: 25%;
+}
+
+
 
 
 
@@ -76,22 +214,6 @@
 
 
   /* Experience Section */
-  .experience-title {
-  text-decoration: none; /* Removes any default underlining */
-  position: relative; /* Needed to position the pseudo-element */
-  display: inline-block; /* Ensures the underline only spans the text width */
-}
-
-.experience-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px; /* Adjusts the position of the underline below the text */
-  left: 0;
-  right: 0;
-  height: 2px; /* Height of the undgierline */
-  background-color: black; /* Color of the underline */
-  width: 100%; /* Ensures it spans the full width of the text */
-}
 
   .experience-container {
     background-color: white; /* Light peach background */
@@ -378,9 +500,9 @@
 </section>
 
 <!-- Education Section -->
-<section id="education" class="education-section">
+<h2 class="section-title education-title">Education</h2>
   <div class="container">
-    <h2 class="section-heading">Education</h2>
+    <h2 class="section-title experience-title">Experience</h2>
     <div class="education-container p-4"> <!-- Outer container with shadow -->
       <!-- Education 1 -->
       <div class="card mb-4 p-3">
@@ -419,7 +541,7 @@
 <!-- Projects Section -->
 <section id="projects" class="projects-section">
   <div class="container">
-    <h2 class="section-heading">Projects</h2>
+    <h2 class="section-title projects-title">Projects</h2>
     <div class="projects-container p-4"> <!-- Outer container with shadow -->
       
       <!-- Project 1 -->
@@ -475,7 +597,7 @@
 <!-- Skills Section -->
 <section id="skills" class="skills-section">
   <div class="container">
-    <h2 class="section-heading">Skills</h2>
+    <h2 class="section-title skills-title">Skills</h2>
     <div class="skills-container text-center">
       <div class="row justify-content-center">
         <div class="col-md-12">
