@@ -60,20 +60,21 @@
   text-decoration: none;
   position: relative;
   display: inline-block;
-  color: #333;
+  color: #333; /* Assuming this is your text color */
 }
 
 .education-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -5px; /* Raises the underline closer to the text */
   left: 0;
   right: 0;
-  height: 3px;
-  background-color: #f28b82;
-  width: 50%;
-  margin-left: 25%;
+  height: 2px; /* Thinner line if that's what's desired */
+  background-color: #f28b82; /* Ensure this is the correct color code for your lightish orange */
+  width: 30%; /* Narrower line width */
+  margin-left: 35%; /* Adjust this value to center the line as needed */
 }
+
 
 /* Skills Title */
 .skills-title {
