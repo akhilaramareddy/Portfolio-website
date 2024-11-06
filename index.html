@@ -26,15 +26,6 @@
   color: #333; /* Adjust the color if needed */
 }
 
-
-
-
-
-
-
-
-
-
 /* Button Styles */
 .btn-outline-custom {
   border: 1px solid #f28b82; /* Coral color for border */
@@ -94,13 +85,6 @@
   }
 
   /* Projects Section */
-
-.projects-heading {
-  font-size: 2rem;
-  margin-top: 50px; /* Increase top margin to create space above the title */
-  margin-bottom: 50px; /* Increase bottom margin to create space below the title */
-  text-align: center;
-  color: black;
 }
 
   .projects-container {
@@ -147,15 +131,6 @@
   }
 
 
-  /* Skills Section */
-  .skills-heading {
-  font-size: 2rem;
-  margin-top: 50px; /* Increase top margin to create space above the title */
-  margin-bottom: 50px; /* Increase bottom margin to create space below the title */
-  text-align: center;
-  color: black;
-}
-
   .skills-section .badge-skill {
     background-color: #f8f3ef; /* Light peach background for skills */
     display: inline-block;
@@ -174,8 +149,10 @@
   }
   .education-section .card {
     background-color: #f8f3ef; /* Slightly darker peach for inner cards */
-    border-radius: 10px; /* Slight rounding for cards */
+    border-radius: 10px; /* Makes the card corners rounded */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    overflow: hidden; /* Ensures content stays within the rounded corners */
+    margin-bottom: 20px; /* Adds space between cards *
   }
 
   /* Contact Section */
@@ -356,7 +333,7 @@
 </section>
 
 <!-- Education Section -->
-
+<section id="education" class="education-section">
   <div class="container">
     <h2 class="experience-title">Education</h2>
     <div class="education-container p-4"> <!-- Outer container with shadow -->
