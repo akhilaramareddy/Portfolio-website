@@ -16,27 +16,28 @@
   /* Adjusted Section Titles */
   /* Title underline styling for Experience, Education, Projects, and Skills *//* Experience Title */
   /* Experience Title */
+/* Adjusting the Experience title CSS to match specifications */
 .experience-title {
-  text-decoration: none;
-  display: block; /* Use block to allow margin auto to work */
-  text-align: center; /* Centers the text horizontally */
-  margin: 0 auto; /* Centers the block within its container, removes default margin */
-  padding: 0; /* Removes any padding to ensure true centering */
-  color: #333;
-  line-height: 10px; /* Adjust line height to vertically center text if needed */
-  height: 60px; /* Provides a fixed height for the title */
+  text-align: center; /* Centers the text */
+  display: block; /* Makes the element a block to fill the width */
+  margin: 20px auto 10px; /* Adds top and bottom margin, auto horizontally centers */
+  font-size: 2rem; /* Adjust the font size to match your screenshot */
+  color: #333; /* Sets the text color */
+  position: relative; /* For positioning the pseudo-element */
+  padding-bottom: 10px; /* Space below the text */
 }
 
 .experience-title::after {
   content: '';
   position: absolute;
-  bottom: -10px; /* Adjust this to reduce or increase space below the underline */
-  left: 50%; /* Center the underline horizontally */
-  transform: translateX(-50%); /* Ensures the underline is perfectly centered */
-  height: 3px;
-  background-color: #f28b82; /* Your chosen color for the underline */
-  width: 50%; /* Control the width of the underline */
+  bottom: 0; /* Aligns at the bottom of the title */
+  left: 50%; /* Start from the middle */
+  width: 50%; /* Adjust the width of the underline to 50% of the title */
+  height: 3px; /* Height of the underline */
+  background-color: #f28b82; /* The lightish orange color */
+  transform: translateX(-50%); /* Center the underline exactly */
 }
+
 
 /* Projects Title */
 .projects-title {
